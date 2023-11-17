@@ -1,0 +1,15 @@
+meta {
+  name: All recipies
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}{{apiVersion}}/recipies
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}

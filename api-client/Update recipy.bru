@@ -1,0 +1,21 @@
+meta {
+  name: Update recipy
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{baseUrl}}{{apiVersion}}/recipies/1
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "name": "Pizza Ananas"
+  }
+}

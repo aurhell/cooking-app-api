@@ -1,0 +1,25 @@
+meta {
+  name: Create recipy
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}{{apiVersion}}/recipies
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "name": "Pizza Regina"
+  }
+}
+
+vars:post-response {
+  recipyId: res.body.id
+}

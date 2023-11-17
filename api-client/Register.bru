@@ -1,0 +1,22 @@
+meta {
+  name: Register
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}{{apiVersion}}/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "bar@foo.local",
+    "password": "secret"
+  }
+}
+
+vars:post-response {
+  token: res.body.token
+}
